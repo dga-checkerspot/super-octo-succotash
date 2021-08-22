@@ -1,7 +1,7 @@
 #!/usr/bin/env nextflow
 
 
-params.PacBio='s3://wgs.algae.mogene.rawdata/MOgenePacBioRuns/MOgene_Dist-ClientUser47-10_17_2017/MOgene_Dist-ClientUser47-10_17_2017-5_E01/m54151_171019_081931.subreads.bam'
+params.pacBio='s3://wgs.algae.mogene.rawdata/MOgenePacBioRuns/MOgene_Dist-ClientUser47-10_17_2017/MOgene_Dist-ClientUser47-10_17_2017-5_E01/m54151_171019_081931.subreads.bam'
 params.shortReads1='s3://wgs.algae.illumina.rawdata/IlluminaAcceleratorMiSeqRuns_A/WGSalgae-53282244/CS002_CHK15_CS003_CHK17_gDNA_TruSeq_FASTQ_Generation_2017-11-24_02_29_45Z-62258745/CS003_L001-ds.52d6c1ee6b094d2683f687b90a0e7450/CHK17gDNA_S2_L001_R1_001.fastq.gz'
 params.shortReads2='s3://wgs.algae.illumina.rawdata/IlluminaAcceleratorMiSeqRuns_A/WGSalgae-53282244/CS002_CHK15_CS003_CHK17_gDNA_TruSeq_FASTQ_Generation_2017-11-24_02_29_45Z-62258745/CS003_L001-ds.52d6c1ee6b094d2683f687b90a0e7450/CHK17gDNA_S2_L001_R2_001.fastq.gz'
 
@@ -9,7 +9,7 @@ params.shortReads2='s3://wgs.algae.illumina.rawdata/IlluminaAcceleratorMiSeqRuns
 process Fastq {
 
 	input:
-	path pbBam from PacBio
+	path pbBam from pacBio
   
   output:
 	file 'CHK17.fastq' into fastq
