@@ -26,6 +26,7 @@ process Fastq {
 
 process Lordec {
 
+  memory '64G'
 
   input:
   path pbFastq from fastq
