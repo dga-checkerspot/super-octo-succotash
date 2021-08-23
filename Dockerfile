@@ -22,6 +22,6 @@ RUN conda install -c conda-forge -y awscli
 
 RUN conda install -c anaconda git 
 
-RUN conda install -c bioconda samtools
+RUN conda install -c bioconda samtools=1.9 --force-reinstall
 
 RUN conda install -c bioconda lordec
