@@ -12,7 +12,6 @@ sr2_data = Channel.fromPath(params.shortReads2)
 
 
 process Fastq {
-	container 'biocontainers/samtools'
 
 	input:
 	path pbBam from pacBio_data
