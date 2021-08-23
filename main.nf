@@ -20,7 +20,7 @@ process Fastq {
 	file 'CHK17.fastq' into fastq
   
   """
-  samtools fastq $pbBam > CHK17.fastq
+  bamToFastq  -i $pbBam -fq CHK17.fastq
   """
 }
 
