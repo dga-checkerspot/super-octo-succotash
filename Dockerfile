@@ -22,6 +22,6 @@ RUN conda install -c conda-forge -y awscli
 
 RUN conda install -c anaconda git 
 
-RUN conda install -c bioconda/label/cf201901 samtools
+RUN conda install -c bioconda bedtools
 
 RUN conda install -c bioconda lordec
