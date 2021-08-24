@@ -37,7 +37,7 @@ process Lordec {
   file 'CHK17_LorDec.fasta' into lordec
   
   """
-  lordec-correct -2 $sr1 $sr2 -k 19 -s 3 -i $pbFastq -o CHK17_LorDec.fasta
+  lordec-correct -2 $sr1 $sr2 -T 1 -k 19 -s 3 -i $pbFastq -o CHK17_LorDec.fasta
   """
 
 }
